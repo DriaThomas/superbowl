@@ -1,7 +1,7 @@
 body {
   
   background-color: #181818;
-  color: #fff;
+
   letter-spacing: 0.1em;
   font-family: Raleway;
   overflow-x: hidden;
@@ -11,6 +11,7 @@ h1 {
   justify-content: center;
 }
 .underlay-text {
+  color: #fff;
 padding-top: 10vw;
   position: absolute;
   left: 50%;
@@ -48,24 +49,70 @@ padding-top: 10vw;
   justify-content: center;
   flex-direction: column;
 } */
-.superbowl-container {
- 
-  border: 10px solid red;
+.football-pic{
+  background: rgba(255,0,0, 0.5);
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  /* content: '';
+
+background-color:  #ff2416;
+opacity: 2;
+position: relative;
+margin-right: 20px;
+margin-bottom: 20px;
+cursor: pointer;
+box-shadow: rgba(0,0,0,.2) 3px 5px 5px; */
+}
+
+.football-button{
   display: flex;
   justify-content: center;
-  position: absolute;
+}
+.superbowl-winner{
+  display: flex;
+  justify-content: center;
+}
+.superbowl-container {
+ margin-top: 25vw;
+  /* border: 10px solid red; */
+  /* background-color: rgba(255, 255, 255, 0.394); */
+  display: flex;
+  /* justify-content: center; */
+  /* position: absolute; */
   right: 43vw;
   top: 60vh;
   flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  /* padding: 10vw; */
+}
+#rams{
+  padding: 5vw;
+}
+#bangels{
+  padding: 5vw;
+}
+.teams{
+  display: flex;
+flex-direction: row;
+padding: 5vw;
 }
 button {
-  width: 5vw;
-  border: 10px solid red;
+  width: 15vw;
+  background-color: whitesmoke;
+  color: gray;
+  /* border: 10px solid red; */
+  padding: 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 .div-teams{
+  display: flex;
+  justify-content: center;
+}
+.center-teams{
   display: flex;
   justify-content: center;
 }
