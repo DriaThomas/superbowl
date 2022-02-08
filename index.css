@@ -97,6 +97,7 @@ box-shadow: rgba(0,0,0,.2) 3px 5px 5px; */
 flex-direction: row;
 padding: 5vw;
 }
+/*button*/
 button {
   width: 15vw;
   background-color: whitesmoke;
