@@ -2,10 +2,20 @@
 
 // Math.random();
 function superbowlWin() {
+
+
+
+
+
   const teams = ["Bangel", "Rams"];
+
   const winner = teams[Math.floor(Math.random() * teams.length)];
   document.getElementById("demo").innerHTML = winner;
-  return `${winner} WINS SUPERBOWL IV`;
+  return new Promise((resolve) => {
+    confetti();
+    setTimeout(() => resolve(winner), 100);
+  });
+  // return `${winner} WINS SUPERBOWL IV`;
 }
 
 
@@ -19,6 +29,7 @@ function updateAnimation(newSpeed) {
     // value2.innerText = superbowlWin()
     // value3.innerText = getRandomValue()
   }, 1000 / newSpeed);
+
 }
 
 // inpSpeed.onchange = function (ev) {

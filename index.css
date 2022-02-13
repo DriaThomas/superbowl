@@ -1,9 +1,10 @@
 body {
+  font-family: Arial, sans-serif;
   
-  background-color: #181818;
-
+  /* background-color: #181818; */
+background-color: #fff;
   letter-spacing: 0.1em;
-  font-family: Raleway;
+
   overflow-x: hidden;
 }
 h1 {
@@ -11,7 +12,7 @@ h1 {
   justify-content: center;
 }
 .underlay-text {
-  color: #fff;
+  color: black;
 padding-top: 10vw;
   position: absolute;
   left: 50%;
@@ -50,8 +51,9 @@ padding-top: 10vw;
   flex-direction: column;
 } */
 .football-pic{
-  background: rgba(255,0,0, 0.5);
   box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  /* background: rgba(255,0,0, 0.5);
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px; */
   /* content: '';
 
 background-color:  #ff2416;
@@ -66,6 +68,7 @@ box-shadow: rgba(0,0,0,.2) 3px 5px 5px; */
 .football-button{
   display: flex;
   justify-content: center;
+  margin-top: 8vw;
 }
 .superbowl-winner{
   display: flex;
@@ -87,18 +90,74 @@ box-shadow: rgba(0,0,0,.2) 3px 5px 5px; */
   /* padding: 10vw; */
 }
 #rams{
+  position: relative;
+  top: -321px;
   padding: 5vw;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 #bangels{
+  position: relative;
+  top: -321px;
   padding: 5vw;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 .teams{
   display: flex;
 flex-direction: row;
-padding: 5vw;
+/* padding: 5vw; */
+position: relative;
+float: left;
+cursor: pointer;
+}
+.tint{
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: rgba(255, 0, 0, 0.5); */
+  transition: background .3s linear;
+}
+.centered-rams{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.centered-bangels{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.tint:hover:before {
+  background: none;
+}
+#demo{
+font-family: Arial, sans-serif;;
+  font-size: 20vw;
+  position: relative;
+    top: -541px;
 }
 /*button*/
 button {
+  position: relative;
+top:-544px;
   width: 15vw;
   background-color: whitesmoke;
   color: gray;
@@ -108,6 +167,8 @@ button {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  border:none;
+  margin-bottom: 50px;
 }
 .div-teams{
   display: flex;
@@ -116,4 +177,37 @@ button {
 .center-teams{
   display: flex;
   justify-content: center;
+}
+#rams {
+ 
+  transition: transform 1s; /* Animation */
+
+  margin: 0 auto;
+}
+#bangels {
+ 
+  transition: transform 1s; /* Animation */
+
+  margin: 0 auto;
+}
+
+#rams:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#bangels:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+button{
+  background-color: #555555;
+  color: white;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  
+}
+.superbowl-logo{
+  margin-top: 320px;
 }

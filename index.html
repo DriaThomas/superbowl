@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
     <title>Superbowl</title>
 </head>
 
 
 <div class="underlay-text">
-    <span>NFL SUPERBOWL 2022</span>
+    <span> 202NFL SUPERBOWL </span>
 </div>
 
 <!-- <label for="North">:</label>
@@ -27,19 +30,66 @@
 
 
 <!-- </canvas> -->
+<div class="logo"> <img class="superbowl-logo" src="images/Super_Bowl_LVI_logo.png"></div>
 <div class="center-teams">
+
     <seciton class="superbowl-container">
         <div class="teams">
-            <div id="rams"><img clas="football-pic" src="images/rams.jpeg" width="400" height="260">Rams</div><br>
-            <div id="bangels"><img class="football-pic" src="images/bangels.jpeg" width="400" height="260">Bangels</div>
+            <i class='fas fa-football-ball' style='font-size:48px;'></i>
+            <div id="rams">
+                <figure class="tint">
+                    <img class="football-pic" src="images/rams.jpeg" width="400" height="260">
+                    <div class="centered-bangels">Bangels</div>
+            </div>
+            <div class="superbowl-winner">
+                <p id="demo"></p>
+            </div>
+
+            </figure>
+            <figure class="tint">
+                <!-- <a onclick="https://www.nfl.com/teams/los-angeles-rams/stats"> -->
+                <div id="bangels"><img class="football-pic" src="images/bangels.jpeg" width="400" height="260">
+                    <!-- </a> -->
+                    <div class="centered-rams">Rams</div>
+                </div>
+            </figure>
         </div>
 
 
         <div class="football-button">
             <button onclick="superbowlWin()">Who will win?</button>
         </div>
-        <div class="superbowl-winner">
-            <p id="demo"></p>
+        <!-- <div class="superbowl-winner">
+    <p id="demo"></p>
+</div> -->
+        <script>
+            // do this for 30 seconds
+            // var duration = 30 * 1000;
+            // var end = Date.now() + duration;
+
+            (function frame() {
+                // launch a few confetti from the left edge
+                confetti({
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                // and launch a few from the right edge
+                confetti({
+                    particleCount: 7,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                // keep going until we are out of time
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        </script>
+
     </seciton>
 </div>
 </body>
