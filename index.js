@@ -1,13 +1,9 @@
-// document;
 
-// Math.random();
 function superbowlWin() {
 
 
 
-
-
-  const teams = ["Bangel", "Rams"];
+  const teams = ["Bengals", "Rams"];
 
   const winner = teams[Math.floor(Math.random() * teams.length)];
   document.getElementById("demo").innerHTML = winner;
@@ -26,19 +22,7 @@ function updateAnimation(newSpeed) {
 
   animationId = setInterval(() => {
     value1.innerText = superbowlWin();
-    // value2.innerText = superbowlWin()
-    // value3.innerText = getRandomValue()
+
   }, 1000 / newSpeed);
 
-}
-
-// inpSpeed.onchange = function (ev) {
- 
-//   document.documentElement.style.setProperty("--speed", ev.target.value);
-
-//   updateAnimation(ev.target.value);
-// };
-
-if(superbowlWin("Bangels")){
-  alert("Bangels WIN!")
 }
